@@ -150,7 +150,7 @@
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label for="valor">Valor</label> <input id="valor" type="text"
-									class="form-control" th:field="*{valor}"
+									class="form-control js-moeda" th:field="*{valor}"
 									placeholder="R$" />
 							</div>
 						</div>
@@ -219,6 +219,13 @@
 
 	<script th:src="@{/layout/javascripts/vendors.min.js}"></script>
 	<script th:src="@{/layout/javascripts/algaworks.min.js}"></script>
-	
+	<script th:src="@{/javascripts/vendors/jquery.masknumber.min.js}"></script>
+
+	<script>
+		$('.js-moeda').maskNumber({
+			decimal : ',',
+			thousands : '.'
+		})
+	</script>
 </body>
 </html>
