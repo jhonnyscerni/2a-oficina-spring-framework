@@ -136,6 +136,14 @@
 							</div>
 						</th:block>
 					</div>
+					
+					<div class="alert  alert-success"
+						th:if="${!#strings.isEmpty(mensagem)}">
+							<div>
+								<i class="glyphicon glyphicon-ok"></i> <span
+									th:text="${mensagem}"></span>
+							</div>
+					</div>
 
 
 					<div class="form-group">
